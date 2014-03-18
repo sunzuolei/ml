@@ -19,11 +19,11 @@ fprintf('Theta found by gradient descent: ');
 fprintf('%f %f \n', theta0Seq(end), theta1Seq(end));
 
 %% Predict the new data
-price = theta1Seq(end) * 3.5 + theta0Seq(end);
-fprintf('For size = 35, we predict a price of %f\n',...
+price = theta1Seq(end) * 35 + theta0Seq(end);
+fprintf('For house size = 35, we predict a price of %f\n',...
     price);
 price = theta1Seq(end) * 70 + theta0Seq(end);
-fprintf('For population = 70, we predict a price of %f\n',...
+fprintf('For house size = 70, we predict a price of %f\n',...
     price);
 
 %%
@@ -43,7 +43,7 @@ grid on;
 box on;
 set(gca, 'xgrid', 'off');
 xlabel('House size in m^2');
-ylabel('House price in $');
+ylabel('House price in 1000$');
 
 %%
 figure('name', 'The trajectory of the GD')
