@@ -2,6 +2,7 @@ clear all; clc; close all;
 load '../Data/dataChap4.mat';
 path(path, '../P11')
 path(path, '../P19')
+path(path, '../P18')
 
 %%
 m              = size(data, 1); 
@@ -37,6 +38,9 @@ for i = 1 : size(newData, 1)
    fprintf('The decision of being malignant for a %.2f tumor:\n', newData(i));
    fprintf(' %d \n\n', dec(i)); 
 end
+%%
+p = predictLogReg(optTheta, X(:, 2:end));
+fprintf('Train Accuracy: %.2f%%\n', mean(double(p == y)) * 100);
 
 %% Plot decision boundary
 % Data

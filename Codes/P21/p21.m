@@ -2,6 +2,7 @@ clear all; clc; close all;
 load '../Data/dataChap4B.mat';
 path(path, '../P11')
 path(path, '../P18')
+path(path, '../P19')
 
 %%
 m              = size(data, 1); 
@@ -15,7 +16,7 @@ initTheta      = zeros(size(X, 2), 1);
 optimoptions('fminunc')
 options = optimoptions(@fminunc, 'GradObj', 'on',...
     'Display', 'iter-detailed', 'MaxIter', 400,...
-    'Algorithm', 'quasi-newton');% 'trust-region'
+    'Algorithm', 'trust-region');% 'trust-region' quasi-newton
 %%
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 
@@ -39,6 +40,10 @@ for i = 1 : size(newData, 1)
     'for a student with the score %.1f, %.1f: \n'...
     '%d \n\n'], newData(i, 1), newData(i, 2), dec(i));
 end
+
+%% Compute accuracy on our training set
+p = predictLogReg(optTheta, X(:, 2:end));
+fprintf('Train Accuracy: %.2f%%\n', mean(double(p == y)) * 100);
 
 %% Plot decision boundary
 % Data

@@ -47,6 +47,10 @@ for i = 1 : size(newData, 1)
    fprintf(' %d \n\n', dec(i)); 
 end
 
+%% Compute accuracy on our training set
+p = predictLogReg(optTheta, X(:, 2:end));
+fprintf('Train Accuracy: %.2f%%\n', mean(double(p == y)) * 100);
+
 %% Plot decision boundary
 % Data
 x    = data(:, 1);
