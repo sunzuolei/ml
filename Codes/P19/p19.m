@@ -63,11 +63,16 @@ optTheta = [-25.06697; 0.20548; 0.20071];
 newData = [40, 70; 80, 80; 65, 40; 90, 35];
 dec     = predictLogReg(optTheta, newData);
 
-for i = 1 : size(newData, 1)
-   fprintf(['The decision of being admitted'...
-    'for a student with the score %.1f, %.1f: \n'...
-    '%d \n\n'], newData(i, 1), newData(i, 2), dec(i));
-end
+% for i = 1 : size(newData, 1)
+%    fprintf(['The decision of being admitted'...
+%     'for a student with the score %.1f, %.1f: \n'...
+%     '%d \n\n'], newData(i, 1), newData(i, 2), dec(i));
+% end
+
+% A more elegant way to display parallel.
+fprintf(['The decision of being admitted'...
+'for a student with the score %.1f, %.1f: \n'...
+'%d \n\n'], [newData, dec]');
 
 %% Compute accuracy on our training set
 p = predictLogReg(optTheta, X(:, 2:end));

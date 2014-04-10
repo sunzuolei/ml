@@ -34,10 +34,10 @@ fprintf('\n');
 newData = [9.2; 4.7; 6.9; 3.2];
 dec     = predictLogReg(optTheta, newData);
 
-for i = 1 : size(newData, 1)
-   fprintf('The decision of being malignant for a %.2f tumor:\n', newData(i));
-   fprintf(' %d \n\n', dec(i)); 
-end
+% A more elegant way to display parallel.
+fprintf('The decision of being malignant for a %.2f tumor:\n %d \n\n',...
+    [newData, dec]');
+
 %%
 p = predictLogReg(optTheta, X(:, 2:end));
 fprintf('Train Accuracy: %.2f%%\n', mean(double(p == y)) * 100);
