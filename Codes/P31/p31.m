@@ -2,10 +2,11 @@ clear all; close all; clc;
 path(path, genpath('../../Codes'));
 
 load dataChap4D
-rng(38);
+rng(666);
 
 %%
 numSamTrain = 4900; 
+lambda      = 1;
 numSamTest  = 5000 - numSamTrain;
 n           = size(X, 2);
 iRand       = randperm(5000);
@@ -19,14 +20,14 @@ yTest       = y( (numSamTrain + 1 ): end, :);
 
 %%
 initTheta   = zeros(n + 1, 1);
-options = optimoptions(@fminunc, 'GradObj', 'on','MaxIter', 500);
+options = optimoptions(@fminunc, 'GradObj', 'on', 'MaxIter', 500);
 
 %%
 optThetaAll = zeros(n + 1, 10);  
 tic;
 for i = 1 : 10
     optThetaAll(:, i) = ...
-        fmincg(@(t)(computeCostLog( xTrain, yTrain == i , t)),...
+    fmincg(@(t)(computeCostLogReg( xTrain, yTrain == i , t, lambda)),...
                     initTheta, options);
 end
 toc;

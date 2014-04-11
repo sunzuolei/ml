@@ -43,11 +43,11 @@ newData  = [0.1, 0.1; -0.5, -0.4];
 newfeats = genFeats(newData(:, 1), newData(:, 2), degree);
 dec      = predictLogReg(optTheta, newfeats(:, 2 : end));
 
-for i = 1 : size(newData, 1)
-   fprintf(['The decision of being past '...
-    'for a QA with the two test result %.1f, %.1f: \n'...
-    '%d \n\n'], newData(i, 1), newData(i, 2), dec(i));
-end
+%%
+fprintf(['The decision of being past '...
+'for a QA with the two test result %.1f, %.1f: \n'...
+'%d \n\n'], [newData, dec]');
+
 %%
 figure('name', 'Logistic regression without generalization');
 hold on;

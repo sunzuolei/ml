@@ -22,9 +22,7 @@ yTargTest   = (yTest == targDigit);
 
 %%
 initTheta   = zeros(n + 1, 1);
-options = optimoptions(@fminunc, 'GradObj', 'on',...
-    'Display', 'iter-detailed', 'MaxIter', 500,...
-    'Algorithm', 'trust-region');% 'trust-region' quasi-newton
+options = optimoptions(@fminunc, 'GradObj', 'on', 'MaxIter', 500);
 %%
 tic;
 % optTheta = ...

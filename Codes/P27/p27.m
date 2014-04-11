@@ -25,12 +25,9 @@ options = optimoptions(@fminunc, 'GradObj', 'on',...
 %%
 %  Run fminunc to obtain the optimal theta
 %  This function will return theta and the cost 
-[optTheta, cost, exitFlag, output] = ...
+[optTheta, cost] = ...
 fminunc(@(t)(computeCostLogReg( feats, y, t, lambda )), initTheta, options);
 
-%%
-disp(output);
-disp(output.message);
 %%
 fprintf('Theta computed from fminunc with regularization: \n');
 fprintf(' %.5f \n', optTheta);
