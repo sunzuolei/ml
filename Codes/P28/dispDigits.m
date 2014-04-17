@@ -1,4 +1,4 @@
-function h = dispDigits(numRow, numCol, x, y, display, pro)
+function h = dispDigits(numRow, numCol, x, y, display, pro, yTrue)
 %%
 if nargin < 5
     display = false;
@@ -7,6 +7,11 @@ if nargin < 6
     showPro = false;
 else
     showPro = true;
+end
+if nargin < 7
+    decEva  = ones(size(y));
+else
+    decEva  = (y == yTrue);
 end
 %%
 fprintf('Plotting...\n');
@@ -23,9 +28,12 @@ for r = 1 : numRow
             dig = 0;
        end
        if showPro
-            title(sprintf('%d\n%.3f', dig, pro(idx)));
+            hTitle = title(sprintf('%d\n%.3f', dig, pro(idx)));
        else
-            title(sprintf('%d', dig));
+            hTitle = title(sprintf('%d', dig));
+       end
+       if ~decEva(idx);
+            set(hTitle, 'color', 'r');
        end
        axis image off
        if display
