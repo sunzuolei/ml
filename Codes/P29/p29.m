@@ -22,7 +22,7 @@ yTargTest   = (yTest == targDigit);
 
 %%
 initTheta   = zeros(n + 1, 1);
-options = optimoptions(@fminunc, 'GradObj', 'on', 'MaxIter', 500);
+options     = optimoptions(@fminunc, 'GradObj', 'on', 'MaxIter', 500);
 %%
 tic;
 % optTheta = ...
@@ -35,10 +35,10 @@ toc;
 
 
 %%
-decTest = predictLogReg(optTheta, xTest);
+decTest     = predictLogReg(optTheta, xTest);
 
 %% Compute accuracy calculation
-decTrain = predictLogReg(optTheta, xTrain(:, 2:end));
+decTrain    = predictLogReg(optTheta, xTrain(:, 2:end));
 fprintf('Train Accuracy (based on training data): %.2f%%\n', ...
         mean(double(decTrain == yTargTrain)) * 100);
     
@@ -46,6 +46,6 @@ fprintf('Train Accuracy (based on test data): %.2f%%\n', ...
         mean(double(decTest  == yTargTest)) * 100);
 
 %% Visualize the classification result
-numRow  = 5;
-numCol  = fix( numSamTest / numRow );
+numRow     = 5;
+numCol     = fix( numSamTest / numRow );
 dispDigits(numRow, numCol, xTest, decTest);

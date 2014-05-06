@@ -19,7 +19,7 @@ y              = data(:, end);
 % numIter        = 1000000;
 
 alpha          = 0.0005;
-numIter        = 30000000;
+numIter        = 300;
 % Theta computed from gradient descent: 
 %  -25.06697 
 %  0.20548 

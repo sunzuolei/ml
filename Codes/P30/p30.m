@@ -20,6 +20,7 @@ yTest       = y( (numSamTrain + 1 ): end, :);
 %%
 initTheta   = zeros(n + 1, 1);
 options = optimoptions(@fminunc, 'GradObj', 'on','MaxIter', 500);
+% options = optimset('MaxIter', 500);
 
 %%
 optThetaAll = zeros(n + 1, 10);  

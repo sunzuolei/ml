@@ -16,10 +16,10 @@ xTest       = X( end - numSamTest + 1: end, :);
 yTest       = y( end - numSamTest + 1: end, :);
 
 %% Predict with neural network
-[decTest, proTest] = pred3layerNN(xTest, Theta1, Theta2);
-[decAll,  proAll ] = pred3layerNN(X,     Theta1, Theta2);
+[decTest, proTest] = forwProp3Layer(xTest, Theta1, Theta2);
+[decAll,  proAll ] = forwProp3Layer(X,     Theta1, Theta2);
 
-%% Compute accuracy calculation
+%% Compute accuracy
 fprintf('Classification Accuracy (based on all data): %.2f%%\n', ...
         mean(double(decAll == y)) * 100);
 %
