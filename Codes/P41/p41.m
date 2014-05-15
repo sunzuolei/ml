@@ -19,7 +19,7 @@ yTest       = y( (numSamTrain + 1 ): end, :);
 
 %% Constrain the neural network
 sizeIn    = 400;
-sizeHid   = 50;
+sizeHid   = 25;
 sizeOut   = 10;
 lambda    = 1;
 
@@ -57,3 +57,4 @@ numRow  = 5;
 numCol  = fix( numSamTest / numRow );
 dispDigits(numRow, numCol, xTest,...
             decTest, false, proTest, yTest);
+        

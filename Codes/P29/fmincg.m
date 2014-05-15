@@ -85,7 +85,7 @@ while i < abs(length)                                      % while not finished
 
   X0 = X; f0 = f1; df0 = df1;                   % make a copy of current values
   X = X + z1*s;                                             % begin line search
-  [f2 df2] = eval(argstr);
+  [f2, df2] = eval(argstr);
   i = i + (length<0);                                          % count epochs?!
   d2 = df2'*s;
   f3 = f1; d3 = d1; z3 = -z1;             % initialize point 3 equal to point 1
