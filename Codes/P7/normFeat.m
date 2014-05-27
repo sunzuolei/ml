@@ -1,8 +1,14 @@
-function [normX, mu, sigma] = normFeat(X)
+function [normX, mu, sigma] = normFeat(X, mu, sigma)
 
-m        = length(X);
-mu       = mean(X, 1);
-sigma    = std(X);
+m        = size(X, 1);
+if nargin == 2
+    error('The sigma should be assigned, if mu is assigned.');
+end
+
+if nargin == 1
+    mu       = mean(X, 1);
+    sigma    = std(X);
+end
 
 muSeq    = repmat(mu,    [m, 1]);
 sigmaSeq = repmat(sigma, [m, 1]);

@@ -1,4 +1,5 @@
 function [dec, pro, aCell, zCell] = forwPropNN(x, tCell, structNN)
+
 numAct   = length(structNN);
 aCell    = cell(numAct, 1);
 zCell    = cell(numAct, 1);
@@ -21,6 +22,7 @@ if structNN(end) == 1
 else
     [pro, dec] = max( aCell{end} );
 end
+
 pro        = pro';
 dec        = dec';
 
