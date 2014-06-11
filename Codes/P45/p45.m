@@ -11,7 +11,7 @@ xAll    = [xTrain; xCrsVal; xTest];
 yAll    = [yTrain; yCrsVal; yTest];
 
 [xTrain, yTrain, xCrsVal, yCrsVal, xTest, yTest] = ...
-         slipData(xAll, yAll, ratioTrain, ratioCrsVal);
+         splitData(xAll, yAll, ratioTrain, ratioCrsVal);
 
 %%
 figure('name', 'Visualize dam data')

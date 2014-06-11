@@ -4,7 +4,7 @@ path(path, genpath('../../Codes'));
 
 load dataChap4C.mat
 
-%% Slipt data
+%% Split data
 degree = 6;
 xTrain = genFeats(data(:, 1), data(:, 2), degree);
 yTrain = data(:, 3);

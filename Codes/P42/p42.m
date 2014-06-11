@@ -5,7 +5,7 @@ path(path, genpath('../../Codes'));
 load dataChap4D
 rng(666);
 
-%% Slipt data
+%% Split data
 numSamTrain = 4900; 
 numSamTest  = 5000 - numSamTrain;
 n           = size(X, 2);
@@ -18,8 +18,8 @@ xTest       = X( (numSamTrain + 1 ): end, :);
 yTest       = y( (numSamTrain + 1 ): end, :);
 
 %% Constrain the neural network
-% structNN  = [400, 25, 10];
-structNN  = [400, 10];
+structNN  = [400, 25, 10];
+% structNN  = [400, 10];
 % structNN  = [400, 25, 25, 40, 10];
 lambda    = 1.5;
 numIter   = 500;

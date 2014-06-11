@@ -7,7 +7,7 @@ rng(742);
 
 targDigit   = 8;
 
-%% Slipt data
+%% Split data
 numSamTrain = 4900; 
 numSamTest  = 5000 - numSamTrain;
 n           = size(X, 2);
