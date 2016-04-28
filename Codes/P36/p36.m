@@ -1,12 +1,17 @@
-clear all; close all; clc;
+clear; close all; clc;
 
 path(path, genpath('../../Codes'));
 
 load dataChap4D
 load dataChap6
 
+%%
+idx        = [2, 1888, 4999];
+X          = X(idx, :);
+y          = y(idx, :);
+
 m          = length(y);
-sizeOut     = 10;
+sizeOut    = 10;
 lambda     = 1;
 
 %% Remap y

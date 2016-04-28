@@ -9,8 +9,8 @@ X              = [ones(m, 1), data(:, 1 : end-1)];
 y              = data(:, end);
 
 %%
-alpha          = 0.0005;
-numIter        = 1000000;
+alpha          = 0.005;
+numIter        = 50000000;
 initTheta      = zeros(size(X, 2), 1); % -14.2  2.1
 % Elapsed time is 1055.017954 seconds.
 % Theta computed from gradient descent: 

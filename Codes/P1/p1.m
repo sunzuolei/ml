@@ -1,4 +1,4 @@
-clear all; clc; close all;
+clear; clc; close all;
 %%
 load '../Data/dataChap2.mat';
 figure('name', 'The data visualization')

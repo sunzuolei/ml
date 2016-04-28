@@ -1,4 +1,4 @@
-clear all; clc; close all;
+clear ; clc; close all;
 load '../Data/dataChap3.mat';
 path(path, '../P7')
 

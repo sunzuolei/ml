@@ -1,4 +1,4 @@
-clear all; close all; clc;
+clear; close all; clc;
 path(path, genpath('../../Codes'));
 load dataChap4C.mat
 
@@ -12,7 +12,7 @@ iNeg = find(y == 0);
 xNeg = x(iNeg, 1:2);
 
 %%
-lambda    = 1.5;
+lambda    = 1.2;
 degree    = 6;
 feats     = genFeats(x(:, 1), x(:, 2), degree);
 %%

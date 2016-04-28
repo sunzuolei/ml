@@ -7,8 +7,8 @@ load '../Data/dataChap3.mat';
 x = data(:, 1:2);
 y = data(:, 3);
 m = size(x, 1);
-a = 1000;
-b = 1200;
+a = floor(10000/3);
+b = floor(12000/3);
 
 %%  
 X = x;

@@ -18,16 +18,16 @@ y              = data(:, end);
 % alpha          = 0.0005;
 % numIter        = 1000000;
 
-alpha          = 0.0005;
-numIter        = 300;
+% alpha          = 0.0005;
+% numIter        = 300;
 % Theta computed from gradient descent: 
 %  -25.06697 
 %  0.20548 
 %  0.20071 
 %  Elapsed time is 3511.649729 seconds.
 
-% alpha          = 0.0008;
-% numIter        = 30000000;
+alpha          = 0.0008;
+numIter        = 30000000;
 % Elapsed time is 3920.116274 seconds.
 % Theta computed from gradient descent: 
 %  -25.15487 

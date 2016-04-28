@@ -2,7 +2,7 @@ clear all; close all; clc;
 path(path, genpath('../../Codes'));
 
 load dataChap4D
-rng(38);
+rng(531);
 
 %%
 numSamTrain = 4900; 

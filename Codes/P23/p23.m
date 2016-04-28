@@ -30,7 +30,7 @@ initTheta      = zeros(size(X, 2), 1);
 %% Over fitting
 [thetaSeqOver, jSeqOver] = gradDesVect(X, y, initTheta, alpha, numIter);
 %% Gradient decent with regularization
-lambda = 2.2;
+lambda = 0.1;
 [thetaSeqReg, jSeqReg] = gradDesReg(X, y, initTheta, alpha, lambda, numIter);
 % ==============================================
 %%

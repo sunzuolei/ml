@@ -1,9 +1,9 @@
-clear all; clc; close all;
+clear; clc; close all;
 %%
 load '../Data/dataChap2.mat';
 x         = data(:, 1);
 y         = data(:, 2);
-
+tic;
 %%
 theta0Seq = linspace(-10, 10, 100);
 theta1Seq = linspace(-1, 4, 100);
@@ -27,10 +27,11 @@ xlabel('\theta_1');
 ylabel('\theta_0');
 zlabel('Cost function');
 colorbar('location', 'northoutside');
-% print('costsurf.png', '-dpng');
+print('costsurf.png', '-dpng');
 
 %%
 figure('name', 'The cost function contour')
 contour(theta1Seq, theta0Seq, costSeq, 50);
 % print('costcontour.png', '-dpng');
 colorbar('location', 'eastoutside');
+toc;

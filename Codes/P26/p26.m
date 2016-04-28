@@ -1,4 +1,4 @@
-clear all; close all; clc;
+clear; close all; clc;
 path(path, genpath('../../Codes'));
 load dataChap4C.mat
 

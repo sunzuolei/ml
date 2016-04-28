@@ -23,10 +23,10 @@ yTest       = (yTest == targDigit);
 
 %% Constrain the neural network
 % structNN  = [400, 25, 10];
-structNN  = [400, 25, 1];
+structNN  = [400, 25,25, 25,25,25, 1];
 % structNN  = [400, 25, 25, 40, 10];
 lambda    = 1.5;
-numIter   = 500;
+numIter   = 100;
 
 %% Perform neural network learning and predicting
 [decTest,  proTest] = neuralNetwork(structNN, lambda, numIter,...

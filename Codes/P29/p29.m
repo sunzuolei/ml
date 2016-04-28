@@ -2,7 +2,7 @@ clear all; close all; clc;
 path(path, genpath('../../Codes'));
 
 load dataChap4D
-rng(555);
+rng(888);
 
 %% Split data
 numSamTrain = 4900; 
@@ -13,7 +13,7 @@ X           = X(iRand, :);
 y           = y(iRand, :); 
 xTrain      = [ones(numSamTrain, 1), X(1 : numSamTrain, :)];
 yTrain      = y(1 : numSamTrain, :);
-targDigit   = 8;
+targDigit   = 2;
 yTargTrain  = (yTrain == targDigit);
 
 xTest       = X( (numSamTrain + 1 ): end, :);

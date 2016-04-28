@@ -1,4 +1,4 @@
-clear all; clc; close all;
+clear; clc; close all;
 path(path, genpath('../../Codes'));
 %%
 Theta1 = [-30,  20,  20;

@@ -1,4 +1,4 @@
-clear all; close all; clc;
+clear; close all; clc;
 
 syms z g
 g = 1 / (1 + exp(-z) );
