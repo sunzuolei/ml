@@ -2,7 +2,7 @@
 
 The codes and slides are used on the **Machine Learning** course for the first year graduate student in Machine Perception and Interaction Group (MPIG) . 
 
-![logo](Codes/Data/MPIG-03.png)
+![logo](Codes/Data/MPIG-03.jpg)
 
 ## 2. References
 
