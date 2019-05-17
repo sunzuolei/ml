@@ -9,7 +9,7 @@ y         = data(:, 2);
 %%
 theta     = [0, 0];
 alpha     = 0.02;
-numIter   = 150000;
+numIter   = 1500;
 
 %%
 [costSeq, theta0Seq, theta1Seq] = gradDes(x, y, alpha, theta, numIter);

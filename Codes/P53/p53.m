@@ -6,7 +6,7 @@ load dataChap10B
 plotData(X, y);
 % print('-dpng', 'rawdata.png');
 % SVM Parameters
-C = 100; sigma = 0.1;
+C = 10; sigma = 0.1;
 
 % We set the tolerance and max_passes lower here so that the code will run
 % faster. However, in practice, you will want to run the training to

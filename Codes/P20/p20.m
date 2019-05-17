@@ -14,8 +14,8 @@ m    = length(y);
 %%
 a            = 150;
 b            = 160;
-theta0Seq    = linspace(-33, 15,  a);
-theta1Seq    = linspace(-11, 10, b);
+theta0Seq    = linspace(-33, 40,  a);
+theta1Seq    = linspace(-11, 20, b);
 theta0SeqTem = repmat (theta0Seq, [b, 1]);
 theta0SeqTem = reshape(theta0SeqTem, 1, []);
 theta1SeqTem = repmat (theta1Seq, [1, a]);

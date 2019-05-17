@@ -19,7 +19,7 @@ yTest       = y( (numSamTrain + 1 ): end, :);
 
 %% Constrain the neural network
 sizeIn    = 400;
-sizeHid   = 25;
+sizeHid   = 5000;
 sizeOut   = 10;
 lambda    = 1;
 

@@ -22,8 +22,8 @@ yTest       = y( (numSamTrain + 1 ): end, :);
 yTest       = (yTest == targDigit);
 
 %% Constrain the neural network
-% structNN  = [400, 25, 10];
-structNN  = [400, 25,25, 25,25,25, 1];
+structNN  = [400,25, 1];
+% structNN  = [400, 25,25, 25,25,25, 1];
 % structNN  = [400, 25, 25, 40, 10];
 lambda    = 1.5;
 numIter   = 100;
